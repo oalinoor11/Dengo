@@ -1,6 +1,7 @@
 import 'package:dengugo/Presentation/AllScreen/Questions/firstquestion.dart';
 import 'package:dengugo/Presentation/AllScreen/Questions/secondquestion.dart';
 import 'package:dengugo/Presentation/AllScreen/Questions/thirdquestion.dart';
+import 'package:dengugo/Presentation/AllScreen/Questions/fourthquestion.dart';
 import 'package:dengugo/Presentation/AllScreen/SplashScreen.dart';
 import 'package:get/get.dart';
 
@@ -10,6 +11,7 @@ class AppRoutes {
   static const String FIRSTQUESTION = "/firstscreen";
   static const String SECONDQUESTION = "/secondscreen";
   static const String THIRDQUESTION = "/thirdscreen";
+  static const String FOURTHQUESTION = "/fourthscreen";
 
   static List<GetPage> routes = [
     GetPage(
@@ -33,6 +35,12 @@ class AppRoutes {
     GetPage(
         name: THIRDQUESTION,
         page: () => ThirdQuestion(),
+        transitionDuration: Duration(milliseconds: 100),
+        transition: Transition.zoom),
+
+    GetPage(
+        name: FOURTHQUESTION,
+        page: () => FourthQuestion(),
         transitionDuration: Duration(milliseconds: 100),
         transition: Transition.zoom),
   ];

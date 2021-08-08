@@ -1,9 +1,7 @@
 import 'package:dengugo/Core/AppRoutes.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
 
-class ThirdQuestion extends StatelessWidget {
+class FourthQuestion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +12,14 @@ class ThirdQuestion extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
           children: [Container(),
             const Text(
-              "ডাইরিয়া হয়েছে ?",
+              "ক্লান্তিভাব হচ্ছে ?",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 100.0),
             const Image(
-              image: AssetImage("assets/diarrhea.png"),
+              image: AssetImage("assets/anxiety.png"),
               width: 200,
               height: 200,
               alignment: Alignment.center,
@@ -80,7 +78,6 @@ class ThirdQuestion extends StatelessWidget {
                     onPressed: ()
                     {
                       print("clicked Yes");
-                      Get.toNamed(AppRoutes.FOURTHQUESTION);
                     },
                   ),
                 ],
