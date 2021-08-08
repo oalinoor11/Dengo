@@ -1,4 +1,7 @@
+import 'package:dengugo/Core/AppRoutes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class FirstQuestion extends StatelessWidget {
 
@@ -8,9 +11,8 @@ class FirstQuestion extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+        child: Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
             children: [Container(),
-        const SizedBox(height: 100.0),
         const Text(
           "শরীর ব্যাথা অনুভব করছেন ?",
           textAlign: TextAlign.center,
@@ -20,8 +22,8 @@ class FirstQuestion extends StatelessWidget {
               const SizedBox(height: 100.0),
               const Image(
                 image: AssetImage("assets/bodypain.png"),
-                width: 160,
-                height: 160,
+                width: 200,
+                height: 200,
                 alignment: Alignment.center,
               ),
 
@@ -78,6 +80,7 @@ class FirstQuestion extends StatelessWidget {
                       onPressed: ()
                       {
                         print("clicked Yes");
+                        Get.toNamed(AppRoutes.SECONDQUESTION);
                       },
                     ),
                   ],

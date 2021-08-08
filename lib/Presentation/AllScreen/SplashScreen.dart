@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: AnimatedContainer(
           height: width,
           duration: Duration(seconds: 5),
-          curve: Curves.bounceInOut,
+          curve: Curves.bounceIn,
           child: Hero(tag: 'app-logo',
               child: Image.asset("assets/logo.png")),
         ),
