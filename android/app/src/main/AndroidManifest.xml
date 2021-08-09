@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dengugo">
    <application
-        android:label="dengugo"
+        android:label="DenGo"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
