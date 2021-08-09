@@ -29,8 +29,8 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: AnimatedContainer(
           height: width,
-          duration: Duration(seconds: 5),
-          curve: Curves.bounceIn,
+          duration: Duration(seconds: 1),
+          curve: Curves.bounceOut,
           child: Hero(tag: 'app-logo',
               child: Image.asset("assets/logo.png")),
         ),
@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
     setState(() {
       width = Get.width - 40;
     });
-    await Future.delayed(Duration(milliseconds: 5100));
-    Get.offAndToNamed(AppRoutes.FIRSTQUESTION);
+    await Future.delayed(Duration(milliseconds: 2000));
+    Get.offAndToNamed(AppRoutes.MAINSCREEN);
   }
 }
