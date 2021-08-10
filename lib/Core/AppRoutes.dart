@@ -8,6 +8,7 @@ import 'package:dengugo/Presentation/AllScreen/Questions/seventhquestion.dart';
 import 'package:dengugo/Presentation/AllScreen/Questions/eighthquestion.dart';
 import 'package:dengugo/Presentation/AllScreen/mainscreen.dart';
 import 'package:dengugo/Presentation/AllScreen/SplashScreen.dart';
+import 'package:dengugo/Presentation/AllScreen/positiveresult.dart';
 import 'package:get/get.dart';
 
 
@@ -22,6 +23,7 @@ class AppRoutes {
   static const String SEVENTHQUESTION = "/seventhscreen";
   static const String EIGHTHQUESTION = "/eighthscreen";
   static const String MAINSCREEN = "/mainscreen";
+  static const String POSITIVERESULT = "/positiveresult";
 
   static List<GetPage> routes = [
     GetPage(
@@ -81,6 +83,12 @@ class AppRoutes {
     GetPage(
         name: MAINSCREEN,
         page: () => MainScreen(),
+        transitionDuration: Duration(milliseconds: 100),
+        transition: Transition.zoom),
+
+    GetPage(
+        name: POSITIVERESULT,
+        page: () => PositiveResult(),
         transitionDuration: Duration(milliseconds: 100),
         transition: Transition.zoom),
   ];

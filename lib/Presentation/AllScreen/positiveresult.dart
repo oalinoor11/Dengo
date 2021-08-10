@@ -1,9 +1,7 @@
 import 'package:dengugo/Core/AppRoutes.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
 
-class EighthQuestion extends StatelessWidget {
+class PositiveResult extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -13,20 +11,25 @@ class EighthQuestion extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
           children: [Container(),
-            const Text(
-              "নাক বন্ধ/পানি পড়ছে ?",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-            ),
-
-            const SizedBox(height: 100.0),
             const Image(
-              image: AssetImage("assets/nosewater.png"),
-              width: 200,
-              height: 200,
+              image: AssetImage("assets/logo.png"),
+              width: 150,
+              height: 150,
               alignment: Alignment.center,
             ),
 
+            const SizedBox(height: 10.0),
+            const Text(
+              "সাবধান! আপনি ডেঙ্গু আক্রান্ত।",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.red),
+            ),
+
+            const Text(
+              "সুস্থ হয়ে উঠতে ডাক্তারের পরামর্শ নিন।",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.blue),
+            ),
 
 
             Padding(
@@ -80,13 +83,20 @@ class EighthQuestion extends StatelessWidget {
                     onPressed: ()
                     {
                       print("clicked Yes");
-                      Get.toNamed(AppRoutes.POSITIVERESULT);
 
                     },
                   ),
                 ],
               ),
             ),
+
+            const Image(
+              image: AssetImage("assets/999.png"),
+              width: 50,
+              height: 50,
+              alignment: Alignment.center,
+            ),
+
           ],
         ),
       ),
