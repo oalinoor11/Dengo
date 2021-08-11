@@ -1,7 +1,21 @@
 import 'package:dengugo/Core/AppRoutes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class PositiveResult extends StatelessWidget {
+class PositiveResult extends StatefulWidget {
+  @override
+  State<PositiveResult> createState() => _PositiveResultState();
+}
+
+class _PositiveResultState extends State<PositiveResult> {
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: 'VEFz8E0pOeg', // id youtube video
+      flags: YoutubePlayerFlags(
+        autoPlay: true,
+        mute: false,
+      ));
 
   @override
   Widget build(BuildContext context) {
@@ -18,34 +32,36 @@ class PositiveResult extends StatelessWidget {
               alignment: Alignment.center,
             ),
 
-            const SizedBox(height: 10.0),
+            const SizedBox(height: 5.0),
             const Text(
               "সাবধান! আপনি ডেঙ্গু আক্রান্ত।",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.red),
             ),
 
-            const Text(
-              "সুস্থ হয়ে উঠতে ডাক্তারের পরামর্শ নিন।",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.blue),
-            ),
-
 
             Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                children: [Container(),
-                  const SizedBox(height: 150.0),
+              padding: const EdgeInsets.all(20.0),
+              child: YoutubePlayer(
+                controller: _controller,
+                showVideoProgressIndicator: true,
+                progressIndicatorColor: Colors.blueAccent,
+              ),
+            ),
+
+                  SizedBox(height: 20,),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    child:
                   RaisedButton(
                     color: Colors.red,
                     textColor: Colors.white,
                     child: Container(
-                      height: 50.0,
-                      width: 100,
+                      height: 40.0,
+                      width: double.infinity,
                       child: Center(
                         child: Text(
-                          "না",
+                          "চিকিৎসা সেবা পেতে চাই",
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
@@ -57,46 +73,41 @@ class PositiveResult extends StatelessWidget {
                     ),
                     onPressed: ()
                     {
-                      print("clicked No");
+                      print("clicked get health service");
+                      Get.toNamed(AppRoutes.HOSPITALS);
+
                     },
                   ),
-
-                  const SizedBox(width: 10.0),
-                  RaisedButton(
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    child: Container(
-                      height: 50.0,
-                      width: 100,
-                      child: Center(
-                        child: Text(
-                          "হ্যাঁ",
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
+                  ),
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: RaisedButton(
+                color: Colors.blue,
+                textColor: Colors.white,
+                child: Container(
+                  height: 40.0,
+                  width: double.infinity,
+                  child: Center(
+                    child: Text(
+                      "পুনরায় যাচাই করতে চাই",
+                      style: TextStyle(
+                        fontSize: 18.0,
                       ),
                     ),
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(24.0),
-                    ),
-                    onPressed: ()
-                    {
-                      print("clicked Yes");
-
-                    },
                   ),
-                ],
+                ),
+                shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(24.0),
+                ),
+                onPressed: ()
+                {
+                  print("clicked test again");
+                  Get.toNamed(AppRoutes.FIRSTQUESTION);
+
+                },
               ),
             ),
-
-            const Image(
-              image: AssetImage("assets/999.png"),
-              width: 50,
-              height: 50,
-              alignment: Alignment.center,
-            ),
-
           ],
         ),
       ),

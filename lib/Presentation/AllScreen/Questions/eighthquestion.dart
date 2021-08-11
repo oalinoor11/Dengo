@@ -80,7 +80,7 @@ class EighthQuestion extends StatelessWidget {
                     onPressed: ()
                     {
                       print("clicked Yes");
-                      Get.toNamed(AppRoutes.POSITIVERESULT);
+                      Get.offAllNamed(AppRoutes.POSITIVERESULT);
 
                     },
                   ),
