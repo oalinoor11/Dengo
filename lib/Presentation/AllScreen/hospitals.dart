@@ -35,7 +35,7 @@ class Hospitals extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5),
                                 blurRadius:3, spreadRadius: 0, offset: Offset(0,2))]),
-                        height: 150.0,
+                        height: 171.0,
                         width: double.infinity,
                         child:
                         Padding(
@@ -93,7 +93,7 @@ class Hospitals extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5),
                                 blurRadius:3, spreadRadius: 0, offset: Offset(0,2))]),
-                        height: 150.0,
+                        height: 171.0,
                         width: double.infinity,
                         child:
                         Padding(
@@ -105,7 +105,7 @@ class Hospitals extends StatelessWidget {
                                   Icon(Icons.medication, color: Colors.red,),
                                   SizedBox(width: 10,),
                                   Text(
-                                      "Evercare Hospital Dhaka",
+                                      "Square Hospitals Ltd.",
                                       softWrap: true,
                                       style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)
                                   ),
@@ -119,7 +119,7 @@ class Hospitals extends StatelessWidget {
                                   SizedBox(width: 10,),
                                   Expanded(
                                     child: Text(
-                                        "Plot: 81, Block: E, Bashundhara R/A, Dhaka 1229",
+                                        "18 Bir Uttam Qazi Nuruzzaman Sarak West, Panthapath, Dhaka 1205",
                                         softWrap: true,
                                         maxLines: 3,
                                         style: TextStyle(fontSize: 18.0,)
@@ -134,7 +134,7 @@ class Hospitals extends StatelessWidget {
                                   Icon(Icons.support_agent, color: Colors.green),
                                   SizedBox(width: 10,),
                                   Text(
-                                      "+880 255037242",
+                                      "+880 28144400",
                                       softWrap: true,
                                       style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500)
                                   ),
@@ -151,7 +151,7 @@ class Hospitals extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5),
                                 blurRadius:3, spreadRadius: 0, offset: Offset(0,2))]),
-                        height: 150.0,
+                        height: 171.0,
                         width: double.infinity,
                         child:
                         Padding(
@@ -163,7 +163,7 @@ class Hospitals extends StatelessWidget {
                                   Icon(Icons.medication, color: Colors.red,),
                                   SizedBox(width: 10,),
                                   Text(
-                                      "Evercare Hospital Dhaka",
+                                      "Anwer Khan Modern Hos.",
                                       softWrap: true,
                                       style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)
                                   ),
@@ -177,7 +177,7 @@ class Hospitals extends StatelessWidget {
                                   SizedBox(width: 10,),
                                   Expanded(
                                     child: Text(
-                                        "Plot: 81, Block: E, Bashundhara R/A, Dhaka 1229",
+                                        "House #17, Road #08, Dhanmondi, Dhaka-1205",
                                         softWrap: true,
                                         maxLines: 3,
                                         style: TextStyle(fontSize: 18.0,)
@@ -192,7 +192,7 @@ class Hospitals extends StatelessWidget {
                                   Icon(Icons.support_agent, color: Colors.green),
                                   SizedBox(width: 10,),
                                   Text(
-                                      "+880 255037242",
+                                      "+880 29670295",
                                       softWrap: true,
                                       style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500)
                                   ),
@@ -228,7 +228,7 @@ class Hospitals extends StatelessWidget {
                 ),
                 onPressed: ()
                 {
-                  print("clicked No");
+                  print("clicked thanks");
                   Get.toNamed(AppRoutes.MAINSCREEN);
                 },
               ),
